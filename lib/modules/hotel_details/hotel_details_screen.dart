@@ -29,7 +29,7 @@ class HotelDetailsScreen extends StatelessWidget {
     return Scaffold(
 
       appBar: CustomAppBar(
-        title: hotel.title,
+        title: 'TravelX',
       ),
 
 

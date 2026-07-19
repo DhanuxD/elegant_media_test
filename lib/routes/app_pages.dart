@@ -9,18 +9,34 @@ import 'app_routes.dart';
 
 class AppPages {
   static final routes = [
+
     GetPage(
       name: AppRoutes.LOGINSCREEN,
       page: () => LoginScreen(),
       binding: AppBinding(),
+      transition: Transition.noTransition,
     ),
-    GetPage(name: AppRoutes.HOTELSSCREEN, page: () => HotelsScreen()),
-    GetPage(name: AppRoutes.HOTELDETAILSSCREEN, page: () => HotelDetailsScreen()),
-    GetPage(name: AppRoutes.SETTINGSSCREEN, page: () => SettingsScreen()),
+
+    GetPage(
+      name: AppRoutes.HOTELSSCREEN,
+      page: () => HotelsScreen(),
+      binding: AppBinding(),
+      transition: Transition.noTransition,
+    ),
+
     GetPage(
       name: AppRoutes.HOTELDETAILSSCREEN,
       page: () => HotelDetailsScreen(),
       binding: AppBinding(),
+      transition: Transition.noTransition,
     ),
+
+    GetPage(
+      name: AppRoutes.SETTINGSSCREEN,
+      page: () => SettingsScreen(),
+      binding: AppBinding(),
+      transition: Transition.noTransition,
+    ),
+
   ];
 }
