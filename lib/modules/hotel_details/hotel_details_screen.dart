@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/services/map_service.dart';
 import '../../routes/app_routes.dart';
 import '../../widgets/app_bar/app_bar.dart';
 import '../../widgets/info_row/app_info_row.dart';
@@ -111,12 +110,25 @@ class HotelDetailsScreen extends StatelessWidget {
                             label: const Text("Map"),
 
                             onPressed: () {
+                              final lat = double.tryParse(hotel.latitude);
+                              final lng = double.tryParse(hotel.longitude);
 
-                              Get.toNamed(
-                                AppRoutes.HOTELMAPSCREEN,
-                                arguments: hotel,
-                              );
+                              if (lat != null && lng != null) {
+                                Get.toNamed(
+                                  AppRoutes.HOTELMAPSCREEN,
+                                  arguments: {
+                                    "latitude": lat,
 
+                                    "longitude": lng,
+
+                                    "hotelName": hotel.title,
+
+                                    "hotelImage": hotel.image.medium,
+
+                                    "address": hotel.address,
+                                  },
+                                );
+                              }
                             },
                           ),
                         ),

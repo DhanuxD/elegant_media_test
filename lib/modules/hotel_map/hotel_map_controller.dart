@@ -2,40 +2,30 @@ import 'package:get/get.dart';
 
 class HotelMapController extends GetxController {
 
-  late dynamic hotel;
+  late double latitude;
+  late double longitude;
+
+  late String hotelName;
+  late String hotelImage;
+  late String address;
 
 
-  @override
-  void onInit() {
+  void setHotelData({
 
-    super.onInit();
+    required double latitude,
+    required double longitude,
+    required String hotelName,
+    required String hotelImage,
+    required String address,
 
-    hotel = Get.arguments;
+  }) {
 
-  }
+    this.latitude = latitude;
+    this.longitude = longitude;
 
-
-  double get latitude {
-
-    return double.parse(
-      hotel.latitude.toString(),
-    );
-
-  }
-
-
-  double get longitude {
-
-    return double.parse(
-      hotel.longitude.toString(),
-    );
-
-  }
-
-
-  String get hotelName {
-
-    return hotel.title;
+    this.hotelName = hotelName;
+    this.hotelImage = hotelImage;
+    this.address = address;
 
   }
 
