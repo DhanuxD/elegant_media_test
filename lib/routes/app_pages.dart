@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../bindings/app_binding.dart';
 import '../modules/hotel_details/hotel_details_screen.dart';
+import '../modules/hotel_map/hotel_map_screen.dart';
 import '../modules/hotels_list/hotels_screen.dart';
 import '../modules/login/login_screen.dart';
 import 'app_routes.dart';
@@ -37,6 +38,10 @@ class AppPages {
       binding: AppBinding(),
       transition: Transition.noTransition,
     ),
-
+    GetPage(
+      name: AppRoutes.HOTELMAPSCREEN,
+      page: () => HotelMapScreen(),
+      binding: AppBinding(),
+    ),
   ];
 }

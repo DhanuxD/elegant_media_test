@@ -6,5 +6,6 @@ abstract class AppRoutes {
 
   static const SETTINGSSCREEN = '/settings';
   static const HOTELDETAILSSCREEN = '/hotel-details';
+  static const HOTELMAPSCREEN = '/hotel-map';
 
 }
