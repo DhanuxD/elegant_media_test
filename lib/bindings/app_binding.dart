@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import '../data/services/auth_service.dart';
 import '../modules/hotel_details/hotel_details_controller.dart';
+import '../modules/hotel_map/hotel_map_controller.dart';
 import '../modules/hotels_list/hotels_controller.dart';
 import '../modules/login/login_controller.dart';
 import '../modules/settings/setings_controller.dart';
@@ -59,6 +60,11 @@ class AppBinding extends Bindings {
 
     Get.lazyPut<SettingsController>(
           () => SettingsController(),
+      fenix: true,
+    );
+
+    Get.lazyPut<HotelMapController>(
+          () => HotelMapController(),
       fenix: true,
     );
 
