@@ -1,7 +1,10 @@
 abstract class AppRoutes {
 
-  static const LOGIN = '/login';
+  static const LOGINSCREEN = '/login';
 
-  static const HOTELS = '/hotels';
+  static const HOTELSSCREEN = '/hotels';
+
+  static const SETTINGSSCREEN = '/settings';
+  static const HOTELDETAILSSCREEN = '/hotel-details';
 
 }

@@ -1,9 +1,10 @@
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/src/bindings_interface.dart';
-import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/get.dart';
 import '../data/services/auth_service.dart';
-import '../modules/hotel_details/hotels_controller.dart';
+import '../modules/hotel_details/hotel_details_controller.dart';
+import '../modules/hotels_list/hotels_controller.dart';
 import '../modules/login/login_controller.dart';
+import '../modules/settings/setings_controller.dart';
+import '../theme/app_theme_manager.dart';
 
 
 class AppBinding extends Bindings {
@@ -12,23 +13,53 @@ class AppBinding extends Bindings {
   void dependencies() {
 
 
-    Get.put(AuthService(), permanent: true);
+    // ==========================
+    // Services
+    // ==========================
 
-
-    Get.lazyPut<LoginController>(
-          ()=>LoginController(),
-      fenix:true,
+    Get.put(
+      AuthService(),
+      permanent: true,
     );
 
 
-    Get.lazyPut<HotelsController>(
-          ()=>HotelsController(),
-      fenix:true,
+
+    // ==========================
+    // Theme
+    // ==========================
+
+    Get.put(
+      AppThemeManager(),
+      permanent: true,
+    );
+
+
+
+    // ==========================
+    // Controllers
+    // ==========================
+
+    Get.lazyPut<LoginController>(
+          () => LoginController(),
+      fenix: true,
+    );
+
+
+    Get.lazyPut<HotelDetailsController>(
+          () => HotelDetailsController(),
+      fenix: true,
     );
 
 
     Get.lazyPut<HotelsController>(
           () => HotelsController(),
+      fenix: true,
+    );
+
+
+    Get.lazyPut<SettingsController>(
+          () => SettingsController(),
+      fenix: true,
     );
 
 
