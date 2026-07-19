@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 
 
       // First screen
-      initialRoute: AppRoutes.LOGIN,
+      initialRoute: AppRoutes.LOGINSCREEN,
 
 
       // All routes
